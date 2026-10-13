@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AccedeED | Educación Inclusiva, Personalizada y Accesible - ODS 4</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Fuente Google: Plus Jakarta Sans para un acabado moderno y nítido -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=OpenDyslexic:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos del prototipo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =======================================================================
+       1. Barra Superior de Accesibilidad Universal (WCAG AAA)
+       ======================================================================= -->
+  <div class="accessibility-bar" role="region" aria-label="Herramientas de Accesibilidad">
+    <div class="container">
+      <div class="a11y-badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path><circle cx="12" cy="12" r="4"></circle></svg>
+        <span>Accesibilidad Bachillerato Bivalente De Talentos Irapuato_BBT</span>
+      </div>
+      <div class="a11y-controls">
+        <button class="a11y-btn" id="btn-toggle-font-size" title="Cambiar tamaño de fuente">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+          Texto A+
+        </button>
+        <button class="a11y-btn" id="btn-toggle-contrast" title="Modo alto contraste">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 0 20z"></path></svg>
+          Contraste
+        </button>
+        <button class="a11y-btn" id="btn-toggle-dyslexia" title="Tipografía para dislexia">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path></svg>
+          Dislexia
+        </button>
+        <button class="a11y-btn" id="btn-read-screen" title="Lector de voz en español">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          Leer
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       2. Encabezado y Navegación Principal
+       ======================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logotipo -->
+      <a href="#inicio" class="logo" aria-label="Ir a Inicio de AccedeED">
+        <div class="logo-icon-wrapper">
+          <img src="logo.png" alt="" width="40" height="40">
+        </div>
+        <span>Accede<span class="logo-highlight">ED</span></span>
+      </a>
+
+      <!-- Enlaces de navegación -->
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#ods4" class="nav-link">Características</a></li>
+          <li><a href="#modulos" class="nav-link">Módulos y Ecosistema</a></li>
+          <li><a href="#comparativa" class="nav-link">Impacto ODS 4</a></li>
+          <li><a href="#descargar" class="nav-link">Recursos</a></li>
+          <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botones de Acción -->
+      <div class="nav-actions">
+        <button class="btn btn-nav-outline js-open-demo">Ver Demo</button>
+        <button class="btn btn-nav-coral js-open-register">Empezar gratis</button>
+        <button class="user-profile-btn js-open-register" title="Mi Cuenta" aria-label="Perfil de usuario">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </button>
+        <!-- Botón menú hamburguesa móvil -->
+        <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =======================================================================
+       3. Hero Section
+       ======================================================================= -->
+  <section id="inicio" class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Columna de Texto -->
+        <div class="hero-text-content">
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            IMPULSANDO EL OBJETIVO DE DESARROLLO SOSTENIBLE 4 (ODS 4)
+          </div>
+
+          <h1 class="hero-title">
+            Educación inclusiva,<br>
+            personalizada y accesible<br>
+            <span class="highlight">para cada estudiante</span>
+          </h1>
+
+          <p class="hero-description">
+            Juntos derribamos barreras con herramientas adaptativas, recursos pedagógicos abiertos, IA de tutoría inteligente y modo sin conexión para cerrar la brecha de aprendizaje en comunidades urbanas y rurales.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary js-open-register">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Iniciar ahora gratis
+            </button>
+            <button class="btn btn-secondary js-open-download">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Descargar App/Recursos
+            </button>
+          </div>
+
+          <div class="hero-trust">
+            <div class="trust-check">
+              <svg class="trust-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+              <span>100% Libre, Gratuito y Accesible</span>
+            </div>
+            <div class="trust-stores">
+              <span class="store-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186c-.307-.246-.49-.623-.49-1.047V2.861c0-.424.183-.801.49-1.047zM15.207 13.414l2.586 2.586-9.123 5.226 6.537-7.812zm0-2.828L8.67 2.774l9.123 5.226-2.586 2.586zm1.414 1.414l3.18-1.821c.883-.505.883-1.332 0-1.838l-3.18-1.82 2.12 3.24-2.12 2.239z"/></svg>
+                Google Play
+              </span>
+              <span>•</span>
+              <span class="store-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.15c.61-.74 1.03-1.76.91-2.79-.89.04-1.98.6-2.61 1.34-.56.64-1.05 1.68-.92 2.69.99.08 2.01-.5 2.62-1.24z"/></svg>
+                App Store
+              </span>
+              <span>•</span>
+              <span>Sin costo ni suscripciones requeridas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna de Imagen / Medios -->
+        <div class="hero-media-wrapper">
+          <div class="hero-image-card">
+            <!-- Badge superior flotante -->
+            <div class="floating-badge-top">
+              <div class="f-tag">
+                <span class="badge-dot" style="width:6px; height:6px;"></span>
+                Aula Interactiva IA
+              </div>
+              <div class="f-text">
+                La personalización del aprendizaje a un clic de distancia para cada nivel
+              </div>
+            </div>
+
+            <img 
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&auto=format&fit=crop&q=80" 
+              alt="Estudiantes colaborando en equipo con dispositivos en el aula interactiva"
+              loading="eager"
+            >
+
+            <!-- Badge inferior flotante -->
+            <div class="floating-badge-bottom">
+              <div class="f-metric">+48%</div>
+              <div class="f-metric-label">
+                <strong>Progreso de Alfabetización</strong><br>
+                Evaluación continua en escuelas piloto
+              </div>
+            </div>
+          </div>
+          <p class="hero-caption">Estudiantes interactuando en clase híbrida conectada</p>
+        </div>
+      </div>
+
+      <!-- Barra de Estadísticas -->
+      <div class="stats-banner">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number coral">+180k</div>
+            <div class="stat-label">Estudiantes Activos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">94%</div>
+            <div class="stat-label">Mejora en Comprensión</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number coral">ODS 4</div>
+            <div class="stat-label">Educación de Calidad</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number cyan">WCAG</div>
+            <div class="stat-label">Accesibilidad Universal (AAA)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       4. Sección ODS 4: Reduciendo la Brecha de Oportunidades
+       ======================================================================= -->
+  <section id="ods4" class="ods4-section">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <div class="section-eyebrow">MARCO DE IMPACTO ODS 4</div>
+          <h2 class="section-title">Reduciendo la brecha de oportunidades con el marco del ODS 4</h2>
+          <p class="section-subtitle">
+            En América Latina, más del 50% de estudiantes de 10 años no comprenden un texto básico, agravado por la falta de conectividad en zonas rurales. AccedeED responde directamente a las metas 4.1, 4.5 y 4.c de las Naciones Unidas.
+          </p>
+        </div>
+
+        <div class="un-agenda-badge">
+          <div class="un-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+          </div>
+          <div>
+            <div class="un-badge-title">Agenda 2030 ODS</div>
+            <div class="un-badge-sub">Educación Inclusiva y Equitativa</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjetas de Metas ODS -->
+      <div class="ods-cards-grid">
+        <!-- Card 1 -->
+        <div class="ods-card">
+          <div class="ods-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          </div>
+          <span class="ods-meta-tag">Meta ODS 4.1</span>
+          <h3 class="ods-card-title">Acceso Equitativo y Gratuito</h3>
+          <p class="ods-card-text">
+            Eliminamos costos y barreras geográficas. Todos los cursos, simulaciones y guías de estudio son 100% libres tanto para escuelas públicas como para autoaprendizaje comunitario.
+          </p>
+          <a href="#modulos" class="ods-card-link">
+            Cursos y mallas curriculares libres
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="ods-card">
+          <div class="ods-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+          </div>
+          <span class="ods-meta-tag">Meta ODS 4.5</span>
+          <h3 class="ods-card-title">Calidad y Aprendizaje Adaptativo</h3>
+          <p class="ods-card-text">
+            Algoritmos pedagógicos éticos evalúan las fortalezas y dificultades del alumno para sugerir rutas lectoras personalizadas, fomentando el pensamiento crítico y competencias STEM contemporáneas.
+          </p>
+          <a href="#modulos" class="ods-card-link">
+            Rutas de aprendizaje autónomo
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="ods-card">
+          <div class="ods-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+          </div>
+          <span class="ods-meta-tag">Meta ODS 4.a</span>
+          <h3 class="ods-card-title">Inclusión y Accesibilidad Universal</h3>
+          <p class="ods-card-text">
+            Diseñado para baja conectividad, lectores de pantalla, subtítulos automáticos, alto contraste y traducción a idiomas originarios (Quechua, Aymara, Guaraní, Náhuatl).
+          </p>
+          <a href="#modulos" class="ods-card-link">
+            Ver modos de accesibilidad (WCAG)
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       5. Sección Módulos y Ecosistema (Pestañas Interactivas 100% Funcionales)
+       ======================================================================= -->
+  <section id="modulos" class="modules-section">
+    <div class="container">
+      <div class="modules-header">
+        <div class="section-eyebrow">ECOSISTEMA INTEGRAL</div>
+        <h2 class="section-title">Módulos diseñados para transformar el aula presencial y a distancia</h2>
+        <p class="section-subtitle">
+          Tecnología centrada en el ser humano que facilita la tarea docente y empodera el ritmo natural de cada niño y joven.
+        </p>
+      </div>
+
+      <div class="modules-tabs-container">
+        <!-- Pestañas a la izquierda -->
+        <div class="module-tabs-list" role="tablist" aria-label="Módulos de la plataforma">
+          <!-- Tab 1 -->
+          <button class="module-tab-btn active" data-module="aula-virtual" role="tab" aria-selected="true">
+            <div class="tab-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <div>
+              <div class="tab-info-title">Aula Virtual Interactiva</div>
+              <div class="tab-info-desc">clases virtuales por medio de Google Classroom, organizar material de estudio y retroalimentación con tutor de IA,</div>
+            </div>
+          </button>
+
+          <!-- Tab 2 -->
+          <button class="module-tab-btn" data-module="biblioteca-rea" role="tab" aria-selected="false">
+            <div class="tab-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10M6 10h10M6 14h6"></path></svg>
+            </div>
+            <div>
+              <div class="tab-info-title">Biblioteca de Recursos Abiertos (REA)</div>
+              <div class="tab-info-desc">Más de 1,000 libros, PDFs y materiales didácticos.</div>
+            </div>
+          </button>
+
+          <!-- Tab 3 -->
+          <button class="module-tab-btn" data-module="tutoria-acompanante" role="tab" aria-selected="false">
+            <div class="tab-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><circle cx="9" cy="10" r="1"></circle><circle cx="12" cy="10" r="1"></circle><circle cx="15" cy="10" r="1"></circle></svg>
+            </div>
+            <div>
+              <div class="tab-info-title">Tutoría Acompañante</div>
+              <div class="tab-info-desc">Tutor de inteligencia artificial 24/7 con modelos abiertos para resolución paso a paso de dudas.</div>
+            </div>
+          </button>
+
+          <!-- Tab 4 -->
+          <button class="module-tab-btn" data-module="portal-docente" role="tab" aria-selected="false">
+            <div class="tab-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+            </div>
+            <div>
+              <div class="tab-info-title">Educación y Progreso de los Estudiantes</div>
+              <div class="tab-info-desc">Detección temprana de brechas de aprendizaje y generador de quizzes para evaluar el nivel y progreso de los estudiantes por materia</div>
+            </div>
+          </button>
+
+          <!-- Tab 5 -->
+          <button class="module-tab-btn" data-module="modo-ligero" role="tab" aria-selected="false">
+            <div class="tab-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"></line><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path><path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+            </div>
+            <div>
+              <div class="tab-info-title">Modo Ligero & Sin Conexión</div>
+              <div class="tab-info-desc">Sincronización completa con memorias USB y servidores en la nueve como Google drive para los materiales de estudio sin necesidad de internet</div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Showcase Interactivo a la derecha -->
+        <div class="module-showcase-panel">
+          <!-- Etiquetas superiores del módulo -->
+          <div class="showcase-top-tags" id="showcase-tags">
+            <span class="pill-tag cyan-tag">Pizarra interactiva en tiempo real</span>
+            <span class="pill-tag cyan-tag">Forma más divertida de aprender</span>
+          </div>
+
+          <!-- Mockup Interactivo del Aula Virtual con Pizarra Colaborativa en Vivo -->
+          <div class="mockup-viewport">
+            <div class="mockup-header-bar">
+              <div class="mockup-dots">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+              </div>
+              <span class="mockup-title">AccedeED Clasroom v2.4</span>
+              <span style="font-size:0.7rem; color:#10b981;">● En vivo</span>
+            </div>
+            <div class="mockup-body" id="mockup-dynamic-body">
+              <!-- Renderizado dinámicamente según la pestaña seleccionada -->
+            </div>
+          </div>
+
+          <!-- Información del Módulo -->
+          <h3 class="showcase-info-title" id="showcase-title">Aula Virtual Interactiva </h3>
+          <p class="showcase-info-desc" id="showcase-desc">
+            Permite a los docentes crear pizarras dinámicas en donde cada estudiante interviene a su propio ritmo, incorporando actividades lúdicas con recompensas pedagógicas, soporte multicanal y adaptación para dificultades del aprendizaje.
+          </p>
+
+          <!-- Pills inferiores -->
+          <div class="showcase-pills-footer" id="showcase-pills">
+            <div class="showcase-pill-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Libre: Apache 2.0 / MIT</span>
+            </div>
+            <div class="showcase-pill-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Interoperable con SCORM</span>
+            </div>
+            <div class="showcase-pill-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Modo sin datos móviles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       6. Sección Tabla Comparativa (Educación Convencional vs AccedeED)
+       ======================================================================= -->
+  <section id="comparativa" class="comparison-section">
+    <div class="container">
+      <div class="comparison-header">
+        <div class="section-eyebrow">DIFERENCIAL DE IMPACTO</div>
+        <h2 class="section-title">Educación Convencional vs. Ecosistema AccedeED</h2>
+        <p class="section-subtitle">
+          Comparamos una arquitectura de aprendizaje concebida para no dejar a nadie atrás, con el sistema restrictivo tradicional.
+        </p>
+      </div>
+
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="col-feature">Criterio Pedagógico</th>
+              <th class="col-traditional">Modelos & Plataformas Convencionales</th>
+              <th class="col-accedeed">
+                <span style="display:inline-flex; align-items:center; gap:0.4rem;">
+                  <span class="badge-dot" style="width:6px; height:6px;"></span>
+                  Ecosistema AccedeED (ODS 4)
+                </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-feature">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+                Conectividad e Internet
+              </td>
+              <td class="td-traditional">
+                Requiere conexión constante, dejando aislados a los estudiantes que presentan inestabilidad de red o viven en zonas rurales.
+              </td>
+              <td class="td-accedeed">
+                <div class="td-accedeed-badge">✓ 100% operable offline</div>
+                Con paquetes de respaldo locales, compresión inteligente y sincronización diferida al detectar señal.
+              </td>
+            </tr>
+            <tr>
+              <td class="td-feature">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Adaptabilidad del Ritmo
+              </td>
+              <td class="td-traditional">
+                Estructura estandarizada y rígida: el alumno se adapta al sistema, o se atrasa, se frustra y abandona.
+              </td>
+              <td class="td-accedeed">
+                <div class="td-accedeed-badge">✓ Microlecciones dinámicas</div>
+                Ajuste automático al perfil cognitivo, refuerzo paso a paso y rutas personalizadas de aprendizaje.
+              </td>
+            </tr>
+            <tr>
+              <td class="td-feature">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                Inclusión y Diversidad
+              </td>
+              <td class="td-traditional">
+                Soporte monolingüe, tipografías inflexibles y nula accesibilidad para dificultades de aprendizaje o discapacidades sensoriales.
+              </td>
+              <td class="td-accedeed">
+                <div class="td-accedeed-badge">✓ Diseño Universal (WCAG AAA)</div>
+                Tipografía OpenDyslexic, soporte en lenguas originarias, narración en audio y alto contraste configurable.
+              </td>
+            </tr>
+            <tr>
+              <td class="td-feature">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                Monitoreo Docente
+              </td>
+              <td class="td-traditional">
+                Calificaciones tardías que evidencian el problema únicamente cuando ya es difícil de revertir y sobrecargan al docente.
+              </td>
+              <td class="td-accedeed">
+                <div class="td-accedeed-badge">✓ Alertas tempranas preventivas</div>
+                Detección formativa en tiempo real para intervenir a tiempo, con generación automática de fichas de apoyo.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       7. Sección Testimonios ("Historias reales de aulas transformadas")
+       ======================================================================= -->
+  <section id="testimonios" class="testimonials-section">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <div class="section-eyebrow">VOCES DEL CAMBIO</div>
+          <h2 class="section-title">Historias reales de aulas transformadas</h2>
+          <p class="section-subtitle">
+            Docentes, directivos y estudiantes que derribaron los límites de la educación tradicional.
+          </p>
+        </div>
+
+        <div class="rating-header-badge">
+          <span style="font-weight:700; color:#fff;">4.9/5</span>
+          <span class="stars-rating">★★★★★</span>
+          <span style="color:#94a3b8; font-size:0.75rem;">(+1,200 reseñas docentes)</span>
+        </div>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonio 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "En nuestra escuela rural en Cusco no contábamos con internet constante. Con el modo offline de AccedeED, mis 24 estudiantes descargan los laboratorios STEM una vez a la semana y continúan el diario sin perder el hilo pedagógico. La tasa de retención aumentó un 35% en solo un trimestre."
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80" alt="Prof. Martha Quispe">
+            <div>
+              <div class="author-name">Prof. Martha Quispe</div>
+              <div class="author-role">Docente Multigrado Rural • Cusco, Perú</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Tengo dislexia y siempre me costaba seguir el ritmo de lectura. El lector inteligente de AccedeED con fuente OpenDyslexic me ayuda a que las evaluaciones sean cómodas y amigables. Siento que me dio autonomía para aprender a mi propio paso. Ahora deseo estudiar ingeniería en sistemas."
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop&q=80" alt="Mateo González">
+            <div>
+              <div class="author-name">Mateo González (15 años)</div>
+              <div class="author-role">Estudiante de Secundaria Comunitaria • Colombia</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Implementamos AccedeED en 12 colegios del distrito. La facilidad para dar seguimiento al avance académico de cada alumno sin sobrecargar a los profesores con tareas administrativas fue decisiva. Es el primer ecosistema que realmente alinea tecnología con equidad pedagógica."
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=80" alt="Lic. Roberto Morales">
+            <div>
+              <div class="author-name">Lic. Roberto Morales</div>
+              <div class="author-role">Director de Red Educativa • Oaxaca, México</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       8. Banner CTA ("Lleva el aula del futuro en tu bolsillo hoy mismo")
+       ======================================================================= -->
+  <section id="descargar" class="cta-section">
+    <div class="container">
+      <div class="cta-banner-card">
+        <!-- Columna Izquierda -->
+        <div class="cta-left-content">
+          <div class="cta-tag">
+            <span class="badge-dot" style="background:#fff; box-shadow:0 0 6px #fff;"></span>
+            100% Gratuito y de Acceso Público
+          </div>
+          <h2 class="cta-title">Lleva el aula del futuro en tu bolsillo hoy mismo</h2>
+          <p class="cta-desc">
+            Descarga la aplicación móvil de AccedeED o accede a la versión web optimizada para cualquier computadora o tableta. Disponible para estudiantes, familias y docentes.
+          </p>
+          <div class="cta-buttons-row">
+            <a href="#" class="btn-store-dark js-open-download">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186c-.307-.246-.49-.623-.49-1.047V2.861c0-.424.183-.801.49-1.047zM15.207 13.414l2.586 2.586-9.123 5.226 6.537-7.812zm0-2.828L8.67 2.774l9.123 5.226-2.586 2.586zm1.414 1.414l3.18-1.821c.883-.505.883-1.332 0-1.838l-3.18-1.82 2.12 3.24-2.12 2.239z"/></svg>
+              Disponible en Google Play
+            </a>
+            <a href="#" class="btn-store-dark js-open-download">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.15c.61-.74 1.03-1.76.91-2.79-.89.04-1.98.6-2.61 1.34-.56.64-1.05 1.68-.92 2.69.99.08 2.01-.5 2.62-1.24z"/></svg>
+              Disponible en App Store
+            </a>
+            <a href="https://sebastianlgr10-ops.github.io/AccedeED_web/" class="btn-store-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              Ver en Web / Escritorio
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna Derecha con Tarjeta QR -->
+        <div class="cta-right-box">
+          <div class="qr-showcase-box">
+            <div class="qr-code-frame">
+              <!-- Código QR SVG de alta fidelidad -->
+              <svg viewBox="0 0 100 100" fill="#0c152a">
+                <rect x="0" y="0" width="30" height="30" rx="4" fill="#0c152a"/>
+                <rect x="5" y="5" width="20" height="20" rx="2" fill="#fff"/>
+                <rect x="9" y="9" width="12" height="12" rx="1" fill="#0c152a"/>
+                
+                <rect x="70" y="0" width="30" height="30" rx="4" fill="#0c152a"/>
+                <rect x="75" y="5" width="20" height="20" rx="2" fill="#fff"/>
+                <rect x="79" y="9" width="12" height="12" rx="1" fill="#0c152a"/>
+                
+                <rect x="0" y="70" width="30" height="30" rx="4" fill="#0c152a"/>
+                <rect x="5" y="75" width="20" height="20" rx="2" fill="#fff"/>
+                <rect x="9" y="79" width="12" height="12" rx="1" fill="#0c152a"/>
+                
+                <rect x="40" y="10" width="8" height="8" rx="1" fill="#e63946"/>
+                <rect x="52" y="18" width="10" height="6" rx="1" fill="#0c152a"/>
+                <rect x="38" y="35" width="24" height="8" rx="1" fill="#0c152a"/>
+                <rect x="45" y="50" width="10" height="10" rx="1" fill="#e63946"/>
+                <rect x="70" y="45" width="12" height="12" rx="1" fill="#0c152a"/>
+                <rect x="85" y="65" width="10" height="10" rx="1" fill="#0c152a"/>
+                <rect x="40" y="75" width="12" height="15" rx="1" fill="#0c152a"/>
+                <rect x="60" y="80" width="25" height="10" rx="1" fill="#0c152a"/>
+              </svg>
+            </div>
+            <div class="qr-label-bold">Escanea y descarga</div>
+            <div class="qr-label-sub">Instalación rápida PWA & APK</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       9. Sección Preguntas Frecuentes (FAQ Accordion)
+       ======================================================================= -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="faq-header">
+        <div class="section-eyebrow">RESOLVIENDO DUDAS</div>
+        <h2 class="section-title">Preguntas Frecuentes sobre AccedeED</h2>
+        <p class="section-subtitle">
+          Conoce cómo garantizamos la gratuidad, la seguridad y el acceso igualitario en cada comunidad.
+        </p>
+      </div>
+
+      <div class="faq-accordion-list">
+        <!-- Item 1 -->
+        <div class="faq-item active">
+          <button class="faq-question-btn">
+            <span>¿Es realmente gratuita la aplicación y todo su contenido?</span>
+            <span class="faq-chevron">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer-panel" style="max-height: 250px;">
+            <div class="faq-answer-content">
+              Sí, 100%. AccedeED es un bien público digital alineado con la meta ODS 4 de las Naciones Unidas. No tiene costos ocultos, no incluye publicidad comercial ni compras integradas. Todo el software y los contenidos curriculares se distribuyen bajo licencias abiertas (Creative Commons y Apache 2.0) financiados por consorcios educativos y cooperación internacional.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>¿Cómo funciona el modo sin conexión a internet?</span>
+            <span class="faq-chevron">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-content">
+              La plataforma almacena localmente los módulos y recursos en el dispositivo (teléfono, tableta o laptop). Además, permite configurar un servidor local de bajo costo (como una Raspberry Pi o una computadora escolar estándar) para que toda el aula trabaje conectada por Wi-Fi local sin consumir un solo megabyte de datos móviles. Cuando el dispositivo detecta internet, sincroniza el progreso de forma transparente.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>¿Cómo se protegen los datos de menores de edad?</span>
+            <span class="faq-chevron">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-content">
+              La privacidad infantil es nuestro pilar fundamental. Cumplimos estrictamente con normativas internacionales (COPPA, GDPR-K y normativas iberoamericanas de protección de datos). No recopilamos geolocalización, números telefónicos ni perfiles biométricos. Las cuentas de menores son supervisadas por sus escuelas o tutores legales y los modelos de tutoría inteligente operan de manera anónima y privada.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>¿Qué requerimientos de dispositivo se necesitan?</span>
+            <span class="faq-chevron">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-content">
+              AccedeED está diseñado con arquitectura ligera: funciona de manera fluida en teléfonos y tabletas con Android 5.0 en adelante (dispositivos de hace más de 8 años) y al menos 1 GB de RAM. En computadoras, se ejecuta en cualquier navegador moderno sin requerir tarjetas gráficas dedicadas.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>¿Cómo puede una escuela o ministerio adoptar la plataforma?</span>
+            <span class="faq-chevron">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-content">
+              Cualquier institución puede comenzar hoy mismo sin trámites burocráticos utilizando el portal de auto-despliegue. Ofrecemos kits de implementación gratuitos para directivos, mallas curriculares mapeadas a los planes de estudio nacionales de América Latina y capacitación continua para docentes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       10. Footer Oficial
+       ======================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Columna Marca -->
+        <div class="footer-brand">
+          <a href="#inicio" class="logo" style="margin-bottom:1rem; display:inline-flex;">
+            <div class="logo-icon-wrapper">
+               <img src="logo.png" alt="" width="40" height="40">
+            </div>
+            <span>Accede<span class="logo-highlight">ED</span></span>
+          </a>
+          <p class="footer-bio">
+            Transformando la educación con inclusión, equidad y tecnología de calidad para transformar el futuro de cada comunidad de habla hispana bajo la iniciativa global ODS 4.
+          </p>
+          <div class="footer-ods-pill">
+            <span class="badge-dot"></span>
+            Compromiso ODS 4 • Educación de Calidad
+          </div>
+        </div>
+
+        <!-- Columna Recursos Educativos -->
+        <div>
+          <h4 class="footer-col-title">Recursos Educativos</h4>
+          <ul class="footer-links-list">
+            <li><a href="#modulos" class="footer-link">Biblioteca de Módulos</a></li>
+            <li><a href="#modulos" class="footer-link">Simuladores Digitales</a></li>
+            <li><a href="#modulos" class="footer-link">Rúbricas de Aprendizaje</a></li>
+            <li><a href="#modulos" class="footer-link">Guías Docentes Abiertas</a></li>
+            <li><a href="#descargar" class="footer-link">Paquetes para USB</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Comunidad y Legal -->
+        <div>
+          <h4 class="footer-col-title">Comunidad y Legal</h4>
+          <ul class="footer-links-list">
+            <li><a href="#testimonios" class="footer-link">Red de Educadores</a></li>
+            <li><a href="#" class="footer-link" id="link-a11y-footer">Accesibilidad Universal</a></li>
+            <li><a href="#" class="footer-link" onclick="showToast('Política de Privacidad conforme a normativas de protección de menores')">Política de Privacidad</a></li>
+            <li><a href="#" class="footer-link" onclick="showToast('Licenciamiento libre Creative Commons Atribución-CompartirIgual')">Términos de Servicio</a></li>
+            <li><a href="#" class="footer-link" onclick="showToast('Repositorio de código abierto en GitHub')">Código Abierto (GitHub)</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Boletín Educativo -->
+        <div class="newsletter-box">
+          <h4 class="footer-col-title">Boletín Educativo</h4>
+          <p>Recibe contenidos pedagógicos, eventos y novedades cada semana directamente en tu correo.</p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" class="newsletter-input" placeholder="tu.correo@escuela.org" required>
+            <button type="submit" class="newsletter-btn">Suscribirse</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Barra Inferior de Copyright -->
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 AccedeED — Plataforma Educativa de Libre Acceso bajo Licencia Creative Commons. Todos los derechos para el bien común.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#" onclick="showToast('Certificación W3C WCAG 2.1 Nivel AAA Verificada')">Declaración de Accesibilidad W3C AAA</a>
+          <a href="#" onclick="showToast('Comité de Ética y Algoritmos Pedagógicos Responsables')">Portal Ético</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =======================================================================
+       11. Modales Interactivos
+       ======================================================================= -->
+
+  <!-- Modal 1: Demostración Interactiva -->
+  <div class="modal-overlay" id="modal-demo">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+      <h3 class="modal-title">Demostración en Vivo de AccedeED</h3>
+      <p class="modal-sub">Explora el entorno de clase interactiva diseñado para baja conectividad e inclusión total.</p>
+      
+      <div style="background:#070d1a; border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.2rem; margin-bottom:1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <span style="font-weight:700; color:#fff; font-size:0.9rem;">Simulador de Clase: Geometría Adaptativa</span>
+          <span style="background:rgba(56,189,248,0.15); color:#38bdf8; font-size:0.75rem; padding:0.2rem 0.6rem; border-radius:4px;">Modo Alumno Activo</span>
+        </div>
+        <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:1rem;">
+          "Si duplicamos la base de un triángulo manteniendo su altura constante... ¿qué le ocurre a su área?"
+        </p>
+        <div style="display:flex; flex-direction:column; gap:0.5rem;">
+          <button class="btn btn-secondary" style="justify-content:flex-start; font-size:0.85rem; text-align:left;" onclick="showToast('¡Correcto! El área se duplica proporcionalmente.')">A) El área también se duplica</button>
+          <button class="btn btn-secondary" style="justify-content:flex-start; font-size:0.85rem; text-align:left;" onclick="showToast('Casi. Recuerda que la fórmula es (base × altura) / 2.')">B) El área se cuadruplica</button>
+          <button class="btn btn-secondary" style="justify-content:flex-start; font-size:0.85rem; text-align:left;" onclick="showToast('Revisa la fórmula del área con nuestro tutor inteligente.')">C) El área permanece igual</button>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:flex-end; gap:0.8rem;">
+        <button class="btn btn-secondary modal-close-btn-action">Cerrar</button>
+        <button class="btn btn-primary js-open-register">Crear cuenta completa gratis</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Registro Gratuito -->
+  <div class="modal-overlay" id="modal-register">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+      <h3 class="modal-title">Únete gratis a AccedeED</h3>
+      <p class="modal-sub">Acceso libre e ilimitado para estudiantes, docentes e instituciones.</p>
+
+      <form id="register-form" style="display:flex; flex-direction:column; gap:1.1rem;">
+        <div>
+          <label style="display:block; font-size:0.82rem; font-weight:700; color:#cbd5e1; margin-bottom:0.4rem;">Selecciona tu rol:</label>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.6rem;">
+            <label style="background:#070d1a; border:1px solid rgba(255,255,255,0.12); padding:0.6rem; border-radius:8px; text-align:center; cursor:pointer; font-size:0.82rem;">
+              <input type="radio" name="user_role" value="Estudiante" checked style="margin-right:0.3rem;">
+              Estudiante
+            </label>
+            <label style="background:#070d1a; border:1px solid rgba(255,255,255,0.12); padding:0.6rem; border-radius:8px; text-align:center; cursor:pointer; font-size:0.82rem;">
+              <input type="radio" name="user_role" value="Docente" style="margin-right:0.3rem;">
+              Docente
+            </label>
+            <label style="background:#070d1a; border:1px solid rgba(255,255,255,0.12); padding:0.6rem; border-radius:8px; text-align:center; cursor:pointer; font-size:0.82rem;">
+              <input type="radio" name="user_role" value="Institución" style="margin-right:0.3rem;">
+              Institución
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label for="reg-name" style="display:block; font-size:0.82rem; font-weight:700; color:#cbd5e1; margin-bottom:0.35rem;">Nombre Completo</label>
+          <input type="text" id="reg-name" class="newsletter-input" placeholder="Ej: Martha Quispe" required>
+        </div>
+
+        <div>
+          <label for="reg-email" style="display:block; font-size:0.82rem; font-weight:700; color:#cbd5e1; margin-bottom:0.35rem;">Correo Electrónico (o nombre de usuario)</label>
+          <input type="text" id="reg-email" class="newsletter-input" placeholder="nombre@escuela.org" required>
+        </div>
+
+        <div>
+          <label for="reg-school" style="display:block; font-size:0.82rem; font-weight:700; color:#cbd5e1; margin-bottom:0.35rem;">Escuela o Comunidad (Opcional)</label>
+          <input type="text" id="reg-school" class="newsletter-input" placeholder="Ej: Escuela Rural #402">
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top:0.5rem; width:100%;">
+          Crear mi cuenta gratuita (Sin tarjeta ni compromisos)
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 3: Descarga de Aplicaciones y Paquetes Offline -->
+  <div class="modal-overlay" id="modal-download">
+    <div class="modal-dialog" style="max-width:550px;">
+      <button class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+      <h3 class="modal-title">Descarga AccedeED</h3>
+      <p class="modal-sub">Lleva todas las herramientas y libros en tu dispositivo para estudiar sin internet.</p>
+
+      <div style="display:flex; flex-direction:column; gap:0.9rem;">
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#070d1a; padding:1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.1);">
+          <div style="display:flex; align-items:center; gap:0.8rem;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" style="color:#10b981;"><path d="M3.609 1.814L13.793 12 3.61 22.186c-.307-.246-.49-.623-.49-1.047V2.861c0-.424.183-.801.49-1.047zM15.207 13.414l2.586 2.586-9.123 5.226 6.537-7.812zm0-2.828L8.67 2.774l9.123 5.226-2.586 2.586zm1.414 1.414l3.18-1.821c.883-.505.883-1.332 0-1.838l-3.18-1.82 2.12 3.24-2.12 2.239z"/></svg>
+            <div>
+              <div style="font-weight:700; color:#fff; font-size:0.9rem;">Android APK Directo</div>
+              <div style="font-size:0.75rem; color:#94a3b8;">Compatible con Android 5.0+ (18.4 MB)</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="padding:0.4rem 0.9rem; font-size:0.8rem;" onclick="showToast('Iniciando descarga de AccedeED-v2.4.apk...')">Descargar APK</button>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#070d1a; padding:1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.1);">
+          <div style="display:flex; align-items:center; gap:0.8rem;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" style="color:#fff;"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.15c.61-.74 1.03-1.76.91-2.79-.89.04-1.98.6-2.61 1.34-.56.64-1.05 1.68-.92 2.69.99.08 2.01-.5 2.62-1.24z"/></svg>
+            <div>
+              <div style="font-weight:700; color:#fff; font-size:0.9rem;">PWA para iOS / Safari</div>
+              <div style="font-size:0.75rem; color:#94a3b8;">Instalación web instantánea sin App Store</div>
+            </div>
+          </div>
+          <button class="btn btn-secondary" style="padding:0.4rem 0.9rem; font-size:0.8rem;" onclick="showToast('Pulsa en Compartir > Agregar a Pantalla de Inicio en tu navegador Safari')">Ver Guía</button>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#070d1a; padding:1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.1);">
+          <div style="display:flex; align-items:center; gap:0.8rem;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            <div>
+              <div style="font-weight:700; color:#fff; font-size:0.9rem;">Imagen para Servidor Local USB / Raspberry Pi</div>
+              <div style="font-size:0.75rem; color:#94a3b8;">Para escuelas sin red (incluye 25,000 libros)</div>
+            </div>
+          </div>
+          <button class="btn btn-secondary" style="padding:0.4rem 0.9rem; font-size:0.8rem;" onclick="showToast('Descargando imagen ISO para memoria USB escolar...')">Descargar ISO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script interactivo -->
+  <script src="script.js"></script>
+</body>
+</html>
